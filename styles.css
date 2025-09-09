@@ -1,0 +1,9 @@
+/* Keep it clean and readable */
+body { background: #f7f9fc; }
+.truncate {
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-title { font-weight: 600; }
