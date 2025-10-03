@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devendra Bajpai — Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: #121212;
+      color: #f5f5f5;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #1e1e1e;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      color: #00adb5;
+    }
+    nav a {
+      color: #f5f5f5;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00adb5;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #00adb5;
+    }
+    .typing {
+      color: #f5f5f5;
+      font-size: 1.3rem;
+      margin-top: 10px;
+      border-right: 3px solid #00adb5;
+      padding-right: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      background: #00adb5;
+      color: #121212;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background: #028a90;
+    }
+
+    section {
+      padding: 80px 50px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2.section-title {
+      font-size: 2rem;
+      color: #00adb5;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .skills,
+    .projects,
+    .certifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00adb5;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e1e1e;
+      color: #aaa;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Devendra Bajpai</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div id="particles-js"></div>
+    <h2>Hello, I’m <span style="color:#00adb5;">Devendra Bajpai</span></h2>
+    <p class="typing"></p>
+    <button class="btn" onclick="window.open('your_cv_link.pdf', '_blank')">
+      Download CV
+    </button>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a developer currently pursuing a Diploma in Computer Science & Engineering.
+      I have experience and skills in Python, JavaScript, HTML, CSS, and MySQL.
+      I enjoy building interactive and user-friendly web applications, solving problems, and learning new technologies.
+    </p>
+    <p>
+      <strong>LinkedIn: </strong>
+      <a
+        href="https://www.linkedin.com/in/devendra-bajpai-0472a634a"
+        target="_blank"
+        style="color:#00adb5; text-decoration: none;"
+        >linkedin.com/in/devendra-bajpai-0472a634a</a
+      >
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <div class="card">Python</div>
+      <div class="card">JavaScript</div>
+      <div class="card">HTML & CSS</div>
+      <div class="card">MySQL</div>
+     
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <div class="certifications">
+      <div class="card">
+        <h3>Certification Title 1</h3>
+        <p>Issuing Authority — Year</p>
+      </div>
+      <div class="card">
+        <h3>Certification Title 2</h3>
+        <p>Issuing Authority — Year</p>
+      </div>
+      <!-- Add more as needed -->
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>Describe what you built, technologies used, and link to live/demo or repo.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Describe what you built, technologies used, and link to live/demo or repo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Email: yourname@example.com</p>
+    <p>
+      <a
+        href="https://github.com/yourusername"
+        target="_blank"
+        style="color:#00adb5; text-decoration: none;"
+        >GitHub</a
+      >
+      | 
+      <a
+        href="https://linkedin.com/in/devendra-bajpai-0472a634a"
+        target="_blank"
+        style="color:#00adb5; text-decoration: none;"
+        >LinkedIn</a
+      >
+      | Twitter / others
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Devendra Bajpai. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    // Typing effect
+    const texts = [
+      "Python Developer",
+      "JavaScript Enthusiast",
+      "Full-Stack Learner",
+      "Problem Solver",
+    ];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+    (function type() {
+      if (count === texts.length) {
+        count = 0;
+      }
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.querySelector(".typing").textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1000);
+      } else {
+        setTimeout(type, 120);
+      }
+    })();
+
+    // Scroll animation
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      const trigger = window.innerHeight / 1.2;
+      sections.forEach((section) => {
+        const top = section.getBoundingClientRect().top;
+        if (top < trigger) {
+          section.classList.add("visible");
+        }
+      });
+    });
+
+    // Particles.js config
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        size: { value: 3 },
+        move: { speed: 2 },
+        line_linked: { enable: true, color: "#00adb5" },
+        color: { value: "#00adb5" },
+      },
+    });
+  </script>
+</body>
+</html>
